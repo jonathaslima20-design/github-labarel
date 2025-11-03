@@ -45,7 +45,7 @@ export default function CorretorHeader({ corretor, language = 'pt-BR', currency 
   return (
     <div className="px-4 pt-4 pb-0">
       <div className="container mx-auto">
-        <div className="w-full overflow-hidden rounded-[52px] bg-muted">
+        <div className="w-full overflow-hidden rounded-[52px] bg-muted" style={{ aspectRatio: '960 / 860' }}>
           <img
             src={corretor.cover_url_desktop || "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg"}
             srcSet={`${corretor.cover_url_mobile || "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg"} 768w, ${corretor.cover_url_desktop || "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg"} 1024w`}
@@ -53,7 +53,7 @@ export default function CorretorHeader({ corretor, language = 'pt-BR', currency 
             alt={`Capa do perfil de ${corretor.name}`}
             loading="lazy"
             decoding="async"
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
